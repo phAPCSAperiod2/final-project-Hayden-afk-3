@@ -1,0 +1,36 @@
+/**
+ * Represents an Assignment with a point value and due date.
+ */
+public class Assignment {
+    private int pointWorth;
+    private int dueDate;
+
+    /**
+     * Constructs an Assignment with the specified point worth and due date.
+     *
+     * @param pointWorth the number of points this assignment is worth
+     * @param dueDate    the due date of this assignment
+     */
+    public Assignment(int pointWorth, int dueDate) {
+        this.pointWorth = pointWorth;
+        this.dueDate = dueDate;
+    }
+
+    /**
+     * Gets the point worth of this assignment.
+     *
+     * @return the number of points this assignment is worth
+     */
+    public int getPointWorth() {
+        return pointWorth;
+    }
+
+    /**
+     * Gets the due date of this assignment.
+     *
+     * @return the due date of this assignment
+     */
+    public int getDueDate() {
+        return dueDate;
+    }
+}
