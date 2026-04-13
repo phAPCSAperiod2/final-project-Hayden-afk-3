@@ -33,4 +33,13 @@ public class Assignment {
     public int getDueDate() {
         return dueDate;
     }
+
+    /**
+     * Sets the due date of assignment
+     *
+     *  @param dueDate the new Date to set
+     */
+    public void setDueDate(int newDate){
+        this.dueDate = newDate;
+    }
 }
