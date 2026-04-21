@@ -11,9 +11,9 @@ public class Assignment {
      * @param pointWorth the number of points this assignment is worth
      * @param dueDate    the due date of this assignment
      */
-    public Assignment(int pointWorth, int dueDate) {
-        this.pointWorth = pointWorth;
-        this.dueDate = dueDate;
+    public Assignment (int pointsWorth, int theDate) {
+        pointWorth = pointsWorth;
+        dueDate = theDate;
     }
 
     /**

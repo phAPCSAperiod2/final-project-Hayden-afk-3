@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Program",
+      "request": "launch",
+      "mainClass": "Program",
+      "projectName": "final-project-Hayden-afk-3_f033b259"
+    },
+    {
+      "type": "java",
       "name": "Run Main",
       "request": "launch",
       "mainClass": "Main",
