@@ -17,7 +17,7 @@ public class List {
                 insertIndex = i;
                 break;
             } else if (assignment.getDueDate() == current.getDueDate()) {
-                if (assignment.getPointsWorth() > current.getPointsWorth()) {
+                if (assignment.getPointWorth() > current.getPointWorth()) {
                     insertIndex = i;
                     break;
                 }
