@@ -32,7 +32,7 @@ public class Program{
          * 4 quit
          */
         Scanner scan = new Scanner(System.in);
-        active = true;
+        boolean active = true;
         while (active)
         {
             System.out.println("Question?? ");
