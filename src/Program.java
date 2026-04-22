@@ -33,6 +33,7 @@ public class Program{
          */
         Scanner scan = new Scanner(System.in);
         boolean active = true;
+        int assi = 1;
         while (active)
         {
             System.out.println("Question?? ");
@@ -41,6 +42,12 @@ public class Program{
                 case 1:
                     if (opt == 1){
                         //new Item
+                        System.out.println("What day is it due?");
+                        //String or int depending on time
+                        //temp day = scan.nextTEMP();
+                        System.out.println("How many points is it worth");
+                        int pointsInput = scan.nextInt();
+                        //Assignment a = new Assignment(TEMP, pointsInput);
                     }
                     break;
                 case 2:
@@ -58,7 +65,7 @@ public class Program{
                         System.out.print("Good-Bye");
                         active = false;
                     }
-                    break:
+                    break;
                 default:
                     //ask again
                     break;
