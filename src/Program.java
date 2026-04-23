@@ -1,26 +1,27 @@
 import java.util.Scanner;
-
-public class Program{
+import java.time.LocalDate;
+public class Program {
     public static void main(String[] args) throws Exception {
 
-
-        //Assignment testy1 = new Assignment(5, 10);
+        // Assignment testy1 = new Assignment(5, 10);
 
         // Tests for Assignment
 
-        //System.out.println(testy1.getPointWorth());
-        //System.out.println(testy1.getDueDate());
-        //testy1.setDueDate(9);
-        //System.out.println(testy1.getDueDate());
+        // System.out.println(testy1.getPointWorth());
+        // System.out.println(testy1.getDueDate());
+        // testy1.setDueDate(9);
+        // System.out.println(testy1.getDueDate());
 
         // Tests for List
         // List myList = new List();
-        // System.out.println("List size after creation: " + myList.size());  // Should be 0
+        // System.out.println("List size after creation: " + myList.size()); // Should
+        // be 0
 
-        //Assignment a1 = new Assignment(5, 10);
-        //myList.addAssignment(a1);
-        //System.out.println("Size after adding: " + myList.size());  // Should be 1
-        //System.out.println("First assignment due date: " + myList.getAssignment(0).getDueDate());  // Should be 5
+        // Assignment a1 = new Assignment(5, 10);
+        // myList.addAssignment(a1);
+        // System.out.println("Size after adding: " + myList.size()); // Should be 1
+        // System.out.println("First assignment due date: " +
+        // myList.getAssignment(0).getDueDate()); // Should be 5
 
         /**
          * Main method
@@ -34,43 +35,43 @@ public class Program{
         Scanner scan = new Scanner(System.in);
         boolean active = true;
         int assi = 1;
-        while (active)
-        {
-            System.out.println("Question?? ");
+        LocalDate todayDate = LocalDate.now();
+        while (active) {
+            System.out.println("What would you like to do (1/2/3/4):\n1. Add a new assignment\n2. View list\n3. Change assignment's attributes\n4. Quit");
             int opt = scan.nextInt();
-            switch (opt){
+            switch (opt) {
                 case 1:
-                    if (opt == 1){
-                        //new Item
+                    if (opt == 1) {
+                        // new Item
                         System.out.println("What day is it due?");
-                        //String or int depending on time
-                        //temp day = scan.nextTEMP();
+                        // String or int depending on time
+                        // temp day = scan.nextTEMP();
                         System.out.println("How many points is it worth");
                         int pointsInput = scan.nextInt();
-                        //Assignment a = new Assignment(TEMP, pointsInput);
+                        // Assignment a = new Assignment(TEMP, pointsInput);
                     }
                     break;
                 case 2:
-                    if (opt == 2){
-                        //access item / view assignment
+                    if (opt == 2) {
+                        // access item / view assignment
+
                     }
                     break;
                 case 3:
-                    if (opt == 3){
-                        //change item
+                    if (opt == 3) {
+                        // change item
                     }
                     break;
                 case 4:
-                    if (opt == 4){
+                    if (opt == 4) {
                         System.out.print("Good-Bye");
                         active = false;
                     }
                     break;
                 default:
-                    //ask again
+                    // ask again
                     break;
             }
-
 
         }
     }
