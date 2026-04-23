@@ -34,8 +34,9 @@ public class Program {
          */
         Scanner scan = new Scanner(System.in);
         boolean active = true;
-        int assi = 1;
+        int assi = 0;
         LocalDate todayDate = LocalDate.now();
+        int[] today = {todayDate.getMonthValue(), todayDate.getDayOfMonth(), todayDate.getYear()};
         System.out.println(todayDate);
         while (active) {
             System.out.println("What would you like to do (1/2/3/4):\n1. Add a new assignment\n2. View list\n3. Change assignment's attributes\n4. Quit");
@@ -50,7 +51,7 @@ public class Program {
                         System.out.println("How many points is it worth");
                         int pointsInput = scan.nextInt();
                         // Assignment a = new Assignment(TEMP, pointsInput);
-
+                        assi++;
                     }
                     break;
                 case 2:
