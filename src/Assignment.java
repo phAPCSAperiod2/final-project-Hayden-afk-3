@@ -42,4 +42,7 @@ public class Assignment {
     public void setDueDate(int newDate){
         this.dueDate = newDate;
     }
+    public void setPointWorth(int newPoints) {
+        this.pointWorth = newPoints;
+    }
 }
