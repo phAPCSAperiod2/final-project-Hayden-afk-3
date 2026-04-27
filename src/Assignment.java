@@ -3,7 +3,9 @@
  */
 public class Assignment {
     private int pointWorth;
-    private int dueDate;
+    private int dueDay;
+    private int dueMonth;
+    private int dueYear;
 
     /**
      * Constructs an Assignment with the specified point worth and due date.
@@ -11,9 +13,11 @@ public class Assignment {
      * @param pointWorth the number of points this assignment is worth
      * @param dueDate    the due date of this assignment
      */
-    public Assignment (int pointsWorth, int theDate) {
+    public Assignment (int theDay, int theMonth, int theYear, int pointsWorth) {
         pointWorth = pointsWorth;
-        dueDate = theDate;
+        dueDay = theDay;
+        dueMonth = theMonth;
+        dueYear = theYear;
     }
 
     /**
@@ -31,7 +35,7 @@ public class Assignment {
      * @return the due date of this assignment
      */
     public int getDueDate() {
-        return dueDate;
+        //return ;
     }
 
     /**
@@ -39,8 +43,10 @@ public class Assignment {
      *
      *  @param dueDate the new Date to set
      */
-    public void setDueDate(int newDate){
-        this.dueDate = newDate;
+    public void setDueDate(int newDay, int newMonth, int newYear){
+        this.dueDay = newDay;
+        this.dueMonth = newMonth;
+        this.dueYear = newYear;
     }
     public void setPointWorth(int newPoints) {
         this.pointWorth = newPoints;

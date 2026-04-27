@@ -49,13 +49,18 @@ public class Program {
                 case 1:
                     if (opt == 1) {
                         // new Item
-                        System.out.println("What day is it due?");
-                        int dayInput = scan.nextInt();
+                        System.out.println("What day is it due? (YYYY/MM/DD)");
+                        String dueInput = scan.next();
+                        String[] partsInput = dueInput.split("/");
+                        int yearInput = Integer.parseInt(partsInput[0]);
+                        int monthInput = Integer.parseInt(partsInput[1]);
+                        int dayInput = Integer.parseInt(partsInput[2]);
+
 
                         System.out.println("How many points is it worth");
                         int pointsInput = scan.nextInt();
 
-                        Assignment a = new Assignment(dayInput, pointsInput);
+                        Assignment a = new Assignment(dayInput, monthInput, yearInput, pointsInput);
                         myList.addAssignment(a);
                         assi++;
                     }
