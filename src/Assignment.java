@@ -32,10 +32,10 @@ public class Assignment {
     /**
      * Gets the due date of this assignment.
      *
-     * @return the due date of this assignment
+     * @return the due date of this assignment as YYYYMMDD
      */
     public int getDueDate() {
-        //return ;
+        return dueYear * 10000 + dueMonth * 100 + dueDay;
     }
 
     /**

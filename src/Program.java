@@ -1,27 +1,8 @@
 import java.time.LocalDate;
 import java.util.Scanner;
+
 public class Program {
     public static void main(String[] args) throws Exception {
-
-        // Assignment testy1 = new Assignment(5, 10);
-
-        // Tests for Assignment
-
-        // System.out.println(testy1.getPointWorth());
-        // System.out.println(testy1.getDueDate());
-        // testy1.setDueDate(9);
-        // System.out.println(testy1.getDueDate());
-
-        // Tests for List
-        // List myList = new List();
-        // System.out.println("List size after creation: " + myList.size()); // Should
-        // be 0
-
-        // Assignment a1 = new Assignment(5, 10);
-        // myList.addAssignment(a1);
-        // System.out.println("Size after adding: " + myList.size()); // Should be 1
-        // System.out.println("First assignment due date: " +
-        // myList.getAssignment(0).getDueDate()); // Should be 5
 
         /**
          * Main method
@@ -43,7 +24,8 @@ public class Program {
         int day = Integer.parseInt(parts[2]);
         List myList = new List();
         while (active) {
-            System.out.println("What would you like to do (1/2/3/4):\n1. Add a new assignment\n2. View list\n3. Change assignment's attributes\n4. Quit");
+            System.out.println(
+                    "What would you like to do (1/2/3/4):\n1. Add a new assignment\n2. View list\n3. Change assignment's attributes\n4. Quit");
             int opt = scan.nextInt();
             switch (opt) {
                 case 1:
@@ -55,7 +37,6 @@ public class Program {
                         int yearInput = Integer.parseInt(partsInput[0]);
                         int monthInput = Integer.parseInt(partsInput[1]);
                         int dayInput = Integer.parseInt(partsInput[2]);
-
 
                         System.out.println("How many points is it worth");
                         int pointsInput = scan.nextInt();
@@ -69,14 +50,13 @@ public class Program {
                     if (opt == 2) {
                         // access item / view assignment
                         if (myList.size() == 0) {
-                        System.out.println("No assignments.");
-                    }
-                    else {
-                        for (int i = 0; i < myList.size(); i++) {
-                            Assignment cur = myList.getAssignment(i);
-                            System.out.println(i + ": Due " + cur.getDueDate() + ", Points " + cur.getPointWorth());
+                            System.out.println("No assignments.");
+                        } else {
+                            for (int i = 0; i < myList.size(); i++) {
+                                Assignment cur = myList.getAssignment(i);
+                                System.out.println((i + 1) + ": Due " + cur.getDueDate() + ", Points " + cur.getPointWorth());
+                            }
                         }
-                    }
                     }
                     break;
                 case 3:
@@ -87,30 +67,32 @@ public class Program {
                             break;
                         }
 
-                        System.out.println("Enter assignment index:");
+                        System.out.println("Enter assignment order:");
                         int index = scan.nextInt();
 
-                        if (index < 0 || index >= myList.size()) {
+                        if (index < 1 || index > myList.size()) {
                             System.out.println("Invalid index.");
                             break;
                         }
 
-                        Assignment edit = myList.getAssignment(index);
+                        Assignment edit = myList.getAssignment(index - 1);
 
                         System.out.println("1. Change due date\n2. Change points");
                         int choice = scan.nextInt();
 
                         if (choice == 1) {
-                            System.out.println("Enter new due date:");
-                            int newDate = scan.nextInt();
-                            edit.setDueDate(newDate);
-                        }
-                        else if (choice == 2) {
+                            System.out.println("Enter new due date (YYYY/MM/DD):");
+                            String newDateInput = scan.next();
+                            String[] newDateParts = newDateInput.split("/");
+                            int newYear = Integer.parseInt(newDateParts[0]);
+                            int newMonth = Integer.parseInt(newDateParts[1]);
+                            int newDay = Integer.parseInt(newDateParts[2]);
+                            edit.setDueDate(newDay, newMonth, newYear);
+                        } else if (choice == 2) {
                             System.out.println("Enter new point value:");
                             int newPoints = scan.nextInt();
                             edit.setPointWorth(newPoints);
-                        }
-                        else {
+                        } else {
                             System.out.println("Invalid option.");
                         }
 
