@@ -1,9 +1,12 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class List {
+public class AssignmentList implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private ArrayList<Assignment> assignments;
 
-    public List() {
+    public AssignmentList() {
         assignments = new ArrayList<>();
     }
 
@@ -25,10 +28,6 @@ public class List {
         }
 
         assignments.add(insertIndex, assignment);
-    }
-
-    public ArrayList<Assignment> getAssignments() {
-        return assignments;
     }
 
     public Assignment getAssignment(int index) {

@@ -16,9 +16,9 @@ public class FileManager {
 
     public static List load() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("assignments.dat"))) {
-            return (List) in.readObject();
+            return (AssignmentList) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            return new List(); // return empty list if no file exists
+            return new AssignmentList(); // return empty list if no file exists
         }
     }
 }
