@@ -22,7 +22,7 @@ public class Program {
         int year = Integer.parseInt(parts[0]);
         int month = Integer.parseInt(parts[1]);
         int day = Integer.parseInt(parts[2]);
-        List myList = new List();
+        List myList = FileManager.load();
         while (active) {
             System.out.println(
                     "What would you like to do (1/2/3/4):\n1. Add a new assignment\n2. View list\n3. Change assignment's attributes\n4. Quit");
@@ -102,6 +102,7 @@ public class Program {
                 case 4:
                     if (opt == 4) {
                         System.out.print("Good-Bye");
+                        FileManager.save(myList);
                         active = false;
                     }
                     break;
