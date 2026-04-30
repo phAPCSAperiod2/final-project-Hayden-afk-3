@@ -1,5 +1,11 @@
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 
 public class AssignmentGUI {
 
@@ -59,7 +65,7 @@ public class AssignmentGUI {
 
             list.addAssignment(a);
 
-            FileManager.save(list);   // SAVE HERE
+            FileManager.save(list.getAssignments());   // SAVE HERE
             refreshList();            // UPDATE UI
 
         } catch (Exception e) {

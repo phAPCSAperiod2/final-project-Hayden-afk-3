@@ -1,5 +1,6 @@
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AssignmentList implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -36,5 +37,9 @@ public class AssignmentList implements Serializable {
 
     public int size() {
         return assignments.size();
+    }
+
+    public List<Assignment> getAssignments() {
+        return assignments;
     }
 }
