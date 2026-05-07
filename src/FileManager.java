@@ -3,11 +3,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.List;
 
 public class FileManager {
 
-    public static void save(List<Assignment> list) {
+    public static void save(AssignmentList list) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("assignments.dat"))) {
             out.writeObject(list);
         } catch (IOException e) {
@@ -19,7 +18,7 @@ public class FileManager {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("assignments.dat"))) {
             return (AssignmentList) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            return new AssignmentList(); // return empty list if no file exists
+            return new AssignmentList();
         }
     }
 }
